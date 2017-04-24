@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+            line-height: 1.7;
+            font-size: 16px;
+            color: #404040;
+            overflow-x: hidden;
+        }
+
+        .container{
+            background-color: #f5f5f5;
+        }
+
+        .bgorange {
+            background-color: rgb(235, 97, 31);
+        }
+
+        .orange {
+            color: rgb(235, 97, 31);
+        }
+
+        /* Header */
+
+        .header {
+            height:60px;
+            text-align: center;
+        }
+
+        .header .icon {
+            width: 36px;
+            height: 36px;
+            margin-top: 12px;
+        }
+
+
+        /* Top */
+        .top {
+            background-color: #FFFFFF;
+            text-align: center;
+            padding:40px;
+        }
+
+        .top .name {
+            font-size: 62px;
+            color: rgb(51, 51, 51);
+            font-weight: bold;
+        }
+
+        .top .name i {
+            font-size:30px;
+        }
+        
+        .top .position {
+            font-size: 20px;
+            color: rgb(141, 141, 142);
+        }
+
+
+        /* listing */
+        .listing {
+            background-color: #f0f0f0;
+            height: 350px;;
+        }
+
+        .listing .objective {
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+
+        .listing .objective p {
+            color: rgb(141, 141, 142);
+            font-size: 16.504px;
+            word-break: break-all;
+        }
+
+
+        .listing  .objective h4{
+            font-weight:bold;
+            color: rgb(81, 83, 86);
+        }
+
+        .listing .contactInfo {
+            height:100%;
+            padding-top: 47px;
+            padding-left: 35px;
+            background-color: #e3e3e2;
+        }
+
+        .listing .contactInfo:before{
+            display:block;
+            content:"";
+            border-width:8px 8px 8px 8px;
+            border-style:solid;
+            border-color:transparent transparent #e3e3e2 transparent;
+
+            /* 定位 */
+            position:absolute;
+            left:47%;
+            top:-16px;
+        }
+
+        .listing .socialIcons {
+            height:100%;
+            padding-top: 47px;
+            padding-left: 35px;
+        }
+
+
+        .listing .contactInfo i {
+            width:34px;
+        }
+
+        .listing .socialIcons i {
+            padding-right: 15px;
+        }
+
+
+
+
+        /* Experience*/
+        .experience h2 {
+            font-weight:bold;
+            padding: 30px 15px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- About -->
+    <div class="row">
+        <!-- Header -->
+        <div class="col-lg-12 header bgorange">
+            <img src="image/Icon.png" class="icon">
+        </div>
+
+        <!-- Top -->
+        <div class="col-lg-12 top">
+            <h1 class="name">Lan Miao <i class="fa fa-mars "></i></h1>
+            <h4 class="position">WEB DEVELOPER <span class="orange"> & </span>NATIVE APP DEVELOPER</h4>
+        </div>
+
+        <!-- Listing -->
+        <div class="col-lg-12 listing">
+            <div class="col-lg-6 objective">
+                <h4>ABOUT ME</h4>
+                <p>Hi,我是xxx，13年实习对日软件外包，14年毕业后一直从事web开发，偶尔做原生android打打辅助，即使没有前端没有设计，也想把产品做好，奔着全栈的态度做工作。天天刷“开源中国，CSDN”，掌握一手资料，保持开阔的视野才能找到更酷的解决方案。热爱开源，觉得有意思会写成博客，对工作有帮助的代码也会共享到github上，嘛，虽然没有star。热爱技术，自学能力强，特别是关注前端主流框架，像VueJS，electronJS都是一直在用的，可以显著提高开发效率。但后台短板也很明显，学校学的是java，工作却用的.net，夸张的说“复制粘贴，增删改查”即后台水平的整体概括。我的愿望是在一家能happy coding的公司，大家相互学习，相互提升，将工作变成一种生活方式。</p>
+            </div>
+            <div class="col-lg-3 contactInfo">
+                <p><i class="fa fa-hand-o-right fa-lg"></i><a href="http://lanmiao.oschina.io/" target="_blank">http://lanmiao.oschina.io/</a></p>
+
+                <p><i class="fa fa-envelope fa-lg"></i>123456789@qq.com</p>
+
+                <p><i class="fa fa-volume-control-phone fa-lg"></i>123456789</p>
+
+                <p><i class="fa fa-home fa-lg"></i>中国</p>
+
+                <p><i class="fa fa-home fa-birthday-cake"></i>9999年</p>
+
+                <p><i class="fa fa-money fa-"></i>5K</p>
+
+            </div>
+            <div class="col-lg-3 socialIcons">
+                <p><i class="fa fa-github fa-2x"></i>/github</p>
+
+                <p><i class="fa fa-android fa-2x"></i>/android</p>
+
+                <p><i class="fa fa-google fa-2x"></i>/google</p>
+
+                <p><i class="fa fa-stack-overflow fa-2x"></i>/stack-overflow</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Experience -->
+    <div class="row">
+        <div class="col-lg-12 experience">
+            <h2>Experience</h2>
+            <div class="col-lg-4 project">
+                <h4></h4>
+            </div>
+            <div class="col-lg-4 project">
+
+            </div>
+            <div class="col-lg-4 project">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- jQuery -->
+<script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</body>
+</html>
