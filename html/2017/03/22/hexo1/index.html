@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="爱生活的懒喵！">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/image/favicon.jpg">
+
+    
+
+    <title>
+        
+        hexo博客(一)：使用hexo+oschina搭建个人博客 |
+        
+        LanMiao
+    </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Plugin CSS -->
+
+
+    <!-- Custom CSS -->
+    <!-- ↓这是stylus文件 -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/toc.css">
+
+
+</head>
+<body></body>
+
+
+<body>
+
+<!-- Header -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header {
+     background-image: url('header-img.jpg');
+        /*post*/
+    
+    }
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- 文章 -->
+                
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#hexo"
+                           title="hexo">hexo</a>
+                        
+                        <a class="tag" href="/tags/#git"
+                           title="git">git</a>
+                        
+                        <a class="tag" href="/tags/#博客"
+                           title="博客">博客</a>
+                        
+                    </div>
+                    <h1>hexo博客(一)：使用hexo+oschina搭建个人博客</h1>
+                    <h2 class="subheading">hexo博客</h2>
+                    <span class="meta">
+                            Posted by LanMiao on
+                        2017-03-22
+                        </span>
+                </div>
+                <!-- 非文章 -->
+                
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Nav -->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">LanMiao</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li><a href="/">Home</a></li>
+                    
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    
+                    <li><a href="/about">About</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Content -->
+<!-- Content -->
+<div class="container">
+    <div class="row">
+        <!-- Post container -->
+
+        <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+
+            <p>最近想搭建一个个人站点，却意外发现了一个好东西，hexo+github pages可以搭建免费的博客！挺有意思，以前也没怎么写过技术博客，索性就趁着这个机会补上以前拉下的功课吧。 o(=·ω·=)m</p>
+<h1 id="什么是Hexo？"><a href="#什么是Hexo？" class="headerlink" title="什么是Hexo？"></a>什么是Hexo？</h1><p>Hexo是一个简单地、轻量地、基于Node的一个静态博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。有丰富的主题可选，还可以自定义主题。生成的静态文件托管在github上。</p>
+<h1 id="什么是github-pages？"><a href="#什么是github-pages？" class="headerlink" title="什么是github pages？"></a>什么是github pages？</h1><p>GitHub Pages 可以被认为是用户编写的、托管在 <a href="https://github.com/" target="_blank" rel="external">github</a> 上的静态网页。由于它的空间免费稳定， 可以用于介绍托管在github上的Project或者搭建网站。我平常使用的是<a href="https://git.oschina.net/" target="_blank" rel="external">码云</a>（因为使用开源中国的很多产品，方便社会化协作），而不是github，都是一样的，国内还有一家代码托管平台<a href="https://coding.net/" target="_blank" rel="external">coding</a>。</p>
+<a id="more"></a>
+<h1 id="1-搭建环境"><a href="#1-搭建环境" class="headerlink" title="1.搭建环境"></a>1.搭建环境</h1><p>安装hexo的前提是要有Node.js以及Git，我是直接从<a href="https://nodejs.org/en/" target="_blank" rel="external">Node</a>和<a href="https://git-scm.com/" target="_blank" rel="external">Git</a>官网下载的安装包安装的，你可以参考<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">Hexo官网教程</a>进行搭建。</p>
+<p>安装完Node以及Git后，通过下面的命令安装Hexo:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<p>我们可以直接使用Git Bash这个命令行工具，<img src="/2017/03/22/hexo1/gitbash.jpg" alt="GitBash" title="GitBash"></p>
+<h1 id="2-本地运行-Hexo"><a href="#2-本地运行-Hexo" class="headerlink" title="2.本地运行 Hexo"></a>2.本地运行 Hexo</h1><p>安装 Hexo 完成后，请依次执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;folder&gt;</div><div class="line">$ cd &lt;folder&gt;</div><div class="line">$ npm install</div></pre></td></tr></table></figure></p>
+<p>例如我们要把他放到c盘根目录的HexoBlog，那命令如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd c:</div><div class="line">hexo init hexoBlog</div><div class="line">cd c:hexoBlog</div><div class="line">npm install</div></pre></td></tr></table></figure></p>
+<p>新建完成后，指定文件夹的目录如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── _config.yml</div><div class="line">├── package.json</div><div class="line">├── scaffolds</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">└── themes</div></pre></td></tr></table></figure>
+<p>下面依次介绍上面各个文件或者目录的用途：</p>
+<ul>
+<li><code>_config.yml</code>站点配置文件，很多全局配置都在这个文件中。</li>
+<li><code>package.json</code> 应用数据。从它可以看出hexo版本信息，以及它所默认或者说依赖的一些组件。</li>
+<li><code>scaffolds</code> 模版文件。当你创建一篇新的文章时，hexo会依据模版文件进行创建，主要用在你想在每篇文章都添加一些共性的内容的情况下。</li>
+<li><code>scripts</code> 放脚本的文件夹， 就是放js文件的地方</li>
+<li><code>source</code> 这个文件夹就是放文章的地方了，除了文章还有一些主要的资源，比如文章里的图片，文件等等东西。这个文件夹最好定期做一个备份，丢了它，整个站点就废了。</li>
+<li>themes 主题文件夹。</li>
+</ul>
+<blockquote>
+<p>详细信息可以查看官网介绍<a href="https://hexo.io/zh-cn/docs/setup.html" target="_blank" rel="external">建站</a>、<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">配置</a></p>
+</blockquote>
+<p>到这里我们就可以现在本地运行查看效果了，走起。执行下面命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd c:hexoBlog</div><div class="line">hexo server</div></pre></td></tr></table></figure></p>
+<p>浏览器输入<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>就可以看到效果。如下：<br><img src="/2017/03/22/hexo1/hexofirst.jpg" alt="hexofirst.jpg" title=""></p>
+<h1 id="3-编写第一篇博客"><a href="#3-编写第一篇博客" class="headerlink" title="3.编写第一篇博客"></a>3.编写第一篇博客</h1><p>这里有两种方式，第一种使用如下命令新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;</div><div class="line">`</div></pre></td></tr></table></figure></p>
+<p>举例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd c:hexoBlog</div><div class="line">hexo new first</div></pre></td></tr></table></figure></p>
+<p>将会在HexoBlog项目的source 目录下的_posts 文件夹中看到有个first.md文件，这就是刚才新建的文章，你会发现普通的.md文件不同，文件开头有如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: first(文章标题)</div><div class="line">date: 2017-03-22 21:21:32（文章日期）</div><div class="line">tags:（文章标签）</div><div class="line">---</div></pre></td></tr></table></figure></p>
+<p>这些是前置申明，还有一些其他的申明以后会说到。<br>。此外还有一个默认的hello-world.md文件，这是默认安装时带的。<br>所以另一种方式就是将你写好的文件直接放_posts文件中，不过要有前置申明。</p>
+<p>使用<code>hexo server</code>重新启动就能看到刚才新建的文章了。</p>
+<h1 id="4-生成静态文件"><a href="#4-生成静态文件" class="headerlink" title="4.生成静态文件"></a>4.生成静态文件</h1><p>现在只能在本地启动项目然后通过本地地址访问博客网站，下面我们就可以利用Hexo生成静态Html，很简单，只需要在命令窗口执行下面代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure></p>
+<p>项目根目录下会生成一个public文件夹，这是直接可以拷走用的,我们托管的就是这一部分代码。<br><img src="/2017/03/22/hexo1/public.jpg" alt="public.jpg" title=""></p>
+<h1 id="5-发布静态Html文件到码云-Pages"><a href="#5-发布静态Html文件到码云-Pages" class="headerlink" title="5.发布静态Html文件到码云 Pages"></a>5.发布静态Html文件到码云 Pages</h1><p>首先需要注册一个码云账号，然后创建一个项目：<br><img src="/2017/03/22/hexo1/gitcreate1.jpg" alt="gitcreate1.jpg" title=""><br><img src="/2017/03/22/hexo1/gitcreate2.jpg" alt="gitcreate2.jpg" title=""><br>创建完项目后得到项目的Https的地址后面要用。地址获取如下图<br><img src="/2017/03/22/hexo1/gitcreate3.jpg" alt="gitcreate3.jpg" title=""></p>
+<p>Hexo 提供了快速方便的一键部署功能，让您只需一条命令就能将网站部署到服务器上。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
+<p>但我们需要先安装一个插件，使用如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>接下来配置根目录_config.yml 文件，修改deploy 的值，如下图：<br><img src="/2017/03/22/hexo1/deploy.jpg" alt="deploy.jpg" title=""></p>
+<p>然后执行一键部署命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
+<p>举例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd c:hexoBlog</div><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
+<p>之后会弹出输入码云账号密码的对话框。</p>
+<p>部署成功之后，登录码云，查看之前创建的项目中出现了本地项目中public 文件夹中的文件，这时候代表之前的部署是成功的。<br><img src="/2017/03/22/hexo1/deploy2.jpg" alt="deploy2.jpg" title=""></p>
+<p>然后开启码云的Pages功能：<br><img src="/2017/03/22/hexo1/pages1.jpg" alt="pages1.jpg" title=""><br><img src="/2017/03/22/hexo1/pages2.jpg" alt="pages2.jpg" title=""></p>
+<p>访问链接：<br><img src="/2017/03/22/hexo1/pages3.jpg" alt="pages3.jpg" title=""></p>
+<p>哇塞，这就成了，感觉不是很难啊？但是怎么是这个样子，样式呢？<br><img src="/2017/03/22/hexo1/pagesshow.jpg" alt="pagesshow.jpg" title=""></p>
+<p>原因：<br>如果你想以根目录的形式访问自己的静态网站，只需要建立一个与自己个性地址同名的项目即可，如<a href="http://git.oschina.net/ipvb" target="_blank" rel="external">http://git.oschina.net/ipvb</a> 这个用户，想要创建一个自己的站点，但不想以子目录的方式访问，想以ipvb.oschina.io直接访问，那么他就可以创建一个名字为ipvb的项目<a href="http://git.oschina.net/ipvb/ipvb" target="_blank" rel="external">http://git.oschina.net/ipvb/ipvb</a> 部署完成后，就可以以<a href="http://ipvb.oschina.io" target="_blank" rel="external">http://ipvb.oschina.io</a> 进行访问了。</p>
+<p>举例：<br>这个博客交HexoBlog，那么你注册时候填写的账户也得是HexoBlog。我的不是，所以我的用子目录才能正确的访问到css,js,hexoBlog/images等路径，所以修改根目录_config.yml 文件，修改url 的值，如下图<br><img src="/2017/03/22/hexo1/url.jpg" alt="url.jpg" title=""></p>
+
+
+
+            <!-- Pager -->
+            <ul class="pager">
+                
+                <li class="previous">
+                    <a href="/2017/03/22/hexo2/" >&larr; Previous Post</a>
+                </li>
+                
+                
+            </ul>
+
+
+
+        </div>
+        <!-- Sidebar container-->
+        <div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+            <!-- toc -->
+            <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top" role="complementary">
+                <h4><i class="fa fa-bookmark"></i> Catalog</h4>
+                <ul class="nav bs-docs-sidenav">
+
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; LanMiao 2017
+                    <br>
+                    Theme by <a href="http://beantech.org/">Bean Tech</a>
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://lanmiao.oschina.io">LanMiao</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/script.js"></script>
+
+
+
+
+</body>
+</html>

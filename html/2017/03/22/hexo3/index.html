@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="爱生活的懒喵！">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/image/favicon.jpg">
+
+    
+
+    <title>
+        
+        hexo博客(三)：中文url报错问题 |
+        
+        LanMiao
+    </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Plugin CSS -->
+
+
+    <!-- Custom CSS -->
+    <!-- ↓这是stylus文件 -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/toc.css">
+
+
+</head>
+<body></body>
+
+
+<body>
+
+<!-- Header -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header {
+     background-image: url('header-img.jpg');
+        /*post*/
+    
+    }
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- 文章 -->
+                
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#hexo"
+                           title="hexo">hexo</a>
+                        
+                    </div>
+                    <h1>hexo博客(三)：中文url报错问题</h1>
+                    <h2 class="subheading">中文</h2>
+                    <span class="meta">
+                            Posted by LanMiao on
+                        2017-03-22
+                        </span>
+                </div>
+                <!-- 非文章 -->
+                
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Nav -->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">LanMiao</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li><a href="/">Home</a></li>
+                    
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    
+                    <li><a href="/about">About</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Content -->
+<!-- Content -->
+<div class="container">
+    <div class="row">
+        <!-- Post container -->
+
+        <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+
+            <p>做sidebar时，发现一些路径不对，需要在最后加“/”，官方默认主题landscape也是在最后加了，大家就不要疑惑了。<br>还有中文有的时候是乱码，所以你觉得有中文的地方，最好在用encode和decode处理一下。像sidebar中不可避免的会出现中文，如果不处理会有错或者显示结果不如预期，所以这些地方的url我基本都处理过了。</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">TypeError: The header content contains invalid characters</div><div class="line">   at ServerResponse.OutgoingMessage.setHeader (_http_outgoing.js:358:11)</div><div class="line">   at ServerResponse.res.setHeader (/test/hexo/node_modules/connect-auth/node_modules/connect/lib/patch.js:58:22)</div><div class="line">   at /test/hexo/node_modules/hexo-server/lib/middlewares/route.js:27:11</div><div class="line">   at call (/test/hexo/node_modules/connect/index.js:239:7)</div><div class="line">   at next (/test/hexo/node_modules/connect/index.js:183:5)</div><div class="line">   at /test/hexo/node_modules/hexo-server/lib/middlewares/header.js:9:5</div><div class="line">   at call (/test/hexo/node_modules/connect/index.js:239:7)</div><div class="line">   at next (/test/hexo/node_modules/connect/index.js:183:5)</div><div class="line">   at next (/test/hexo/node_modules/connect/index.js:161:14)</div><div class="line">   at next (/test/hexo/node_modules/connect/index.js:161:14)</div><div class="line">   at next (/test/hexo/node_modules/connect/index.js:161:14)</div><div class="line">   at next (/test/hexo/node_modules/connect/index.js:161:14)</div><div class="line">   at next (/test/hexo/node_modules/connect/index.js:161:14)</div><div class="line">   at next (/test/hexo/node_modules/connect/index.js:161:14)</div><div class="line">   at next (/test/hexo/node_modules/connect/index.js:161:14)</div><div class="line">   at next (/test/hexo/node_modules/connect/index.js:161:14)</div><div class="line">   at next (/test/hexo/node_modules/connect/index.js:161:14)</div><div class="line">   at next (/test/hexo/node_modules/connect/index.js:161:14)</div><div class="line">   at next (/test/hexo/node_modules/connect/index.js:161:14)</div><div class="line">   at next (/test/hexo/node_modules/connect/index.js:161:14)</div><div class="line">   at next (/test/hexo/node_modules/connect/index.js:161:14)</div><div class="line">   at next (/test/hexo/node_modules/connect/index.js:161:14)</div></pre></td></tr></table></figure>
+<p><strong>发现：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">http://localhost:4000/hexoblog/tags/博客  #不能打开</div><div class="line">http://localhost:4000/hexoblog/tags/博客/  #可以打开</div></pre></td></tr></table></figure>
+<p>一种办法是修改源代码，这个不讲了参考这个人写的<a href="http://www.opscaff.com/2017/02/15/Hexo-%E4%B8%AD%E6%96%87Url-%E6%8A%A5%E9%94%99The-header-content-contains-invalid-characters/" target="_blank" rel="external"><code>这篇文章</code></a></p>
+<p>这里省事点，那就加上斜杠呗！官方默认主题landscape也是在最后加了，大家就不要费那些劲了。</p>
+
+
+
+            <!-- Pager -->
+            <ul class="pager">
+                
+                
+                <li class="next">
+                    <a href="/2017/03/22/hexo2/" >Next Post &rarr;</a>
+                </li>
+                
+            </ul>
+
+
+
+        </div>
+        <!-- Sidebar container-->
+        <div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+            <!-- toc -->
+            <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top" role="complementary">
+                <h4><i class="fa fa-bookmark"></i> Catalog</h4>
+                <ul class="nav bs-docs-sidenav">
+
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; LanMiao 2017
+                    <br>
+                    Theme by <a href="http://beantech.org/">Bean Tech</a>
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://lanmiao.oschina.io">LanMiao</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/script.js"></script>
+
+
+
+
+</body>
+</html>

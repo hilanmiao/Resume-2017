@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="爱生活的懒喵！">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/image/favicon.jpg">
+
+
+    <title>
+
+        about |
+
+        LanMiao
+    </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel='stylesheet' href='unitegallery/css/unite-gallery.css' type='text/css' />
+    <link rel='stylesheet' href='unitegallery/skins/alexis/alexis.css' type='text/css' />
+    <link rel='stylesheet' href='unitegallery/themes/default/ug-theme-default.css' type='text/css' />
+
+    <!-- jQuery -->
+    <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src='unitegallery/js/unitegallery.min.js'></script>
+    <script src='unitegallery/themes/grid/ug-theme-grid.js'></script>
+    <style>
+        .container {
+            margin-top: 180px;
+        }
+
+        #gallery {
+            margin:0 auto;
+            max-width:100%;
+        }
+    </style>
+
+    <style>
+        /*-----------------------------nav-----------------------------------*/
+        @media only screen and (max-width: 767px) {
+            .navbar-default .navbar-collapse {
+                border: none;
+                background: #fff;
+                box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+                box-shadow: rgba(0, 0, 0, 0.118) 0px 1px 6px, rgba(0, 0, 0, 0.239) 0px 1px 4px;
+                border-radius: 2px;
+                width: 170px;
+                float: right;
+                margin: 0px;
+            }
+
+            #huxblog_navbar {
+                opacity: 0;
+                transform: scaleX(0);
+                transform-origin: top right;
+                transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+                -webkit-transform: scaleX(0);
+                -webkit-transform-origin: top right;
+                -webkit-transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+            }
+
+            #huxblog_navbar a {
+                font-size: 13px;
+                line-height: 28px;
+            }
+
+            #huxblog_navbar .navbar-collapse {
+                height: 0px;
+                transform: scaleY(0);
+                transform-origin: top right;
+                transition: transform 500ms cubic-bezier(0.23, 1, 0.32, 1);
+                -webkit-transform: scaleY(0);
+                -webkit-transform-origin: top right;
+                -webkit-transition: -webkit-transform 500ms cubic-bezier(0.23, 1, 0.32, 1);
+            }
+
+            #huxblog_navbar li {
+                opacity: 0;
+                transition: opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 205ms;
+                -webkit-transition: opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 205ms;
+            }
+
+            #huxblog_navbar.in {
+                transform: scaleX(1);
+                -webkit-transform: scaleX(1);
+                opacity: 1;
+            }
+
+            #huxblog_navbar.in .navbar-collapse {
+                transform: scaleY(1);
+                -webkit-transform: scaleY(1);
+            }
+
+            #huxblog_navbar.in li {
+                opacity: 1;
+            }
+        }
+
+        .navbar-custom {
+            background: none;
+            border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 3 /* Hux learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */;
+            font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+            line-height: 1.7;
+        }
+
+        .navbar-custom .navbar-brand {
+            font-weight: 800;
+            color: #fff;
+            height: 56px;
+            line-height: 25px;
+        }
+
+        .navbar-custom .navbar-brand:hover {
+            color: rgb(230, 97, 140);
+        }
+
+        .navbar-custom .nav li a {
+            text-transform: uppercase;
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .navbar-custom .nav li a:active {
+            background: rgba(0, 0, 0, 0.12);
+        }
+
+        @media only screen and (min-width: 768px) {
+            .navbar-custom {
+                background: transparent;
+                border-bottom: 1px solid #f2f2f2;
+            }
+
+            .navbar-custom body {
+                font-size: 20px;
+            }
+
+            .navbar-custom .navbar-brand {
+                color: #404040;
+                padding: 20px;
+                line-height: 20px;
+            }
+
+            .navbar-custom .navbar-brand:hover,
+            .navbar-custom .navbar-brand:focus {
+                color: rgb(230, 97, 140);
+            }
+
+            .navbar-custom .nav li a {
+                color: #404040;
+                padding: 20px;
+            }
+
+            .navbar-custom .nav li a:hover,
+            .navbar-custom .nav li a:focus {
+                /*color: rgba(255, 255, 255, 0.8);*/
+                color: rgb(230, 97, 140);
+            }
+
+            .navbar-custom .nav li a:active {
+                background: none;
+            }
+        }
+
+        @media only screen and (min-width: 1170px) {
+            .navbar-custom {
+                -webkit-transition: background-color 0.3s;
+                -moz-transition: background-color 0.3s;
+                transition: background-color 0.3s;
+                /* Force Hardware Acceleration in WebKit */
+                -webkit-transform: translate3d(0, 0, 0);
+                -moz-transform: translate3d(0, 0, 0);
+                -ms-transform: translate3d(0, 0, 0);
+                -o-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+
+            .navbar-custom.is-fixed {
+                /* when the user scrolls down, we hide the header right above the viewport */
+                position: fixed;
+                top: -61px;
+                background-color: rgba(255, 255, 255, 0.9);
+                border-bottom: 1px solid #f2f2f2;
+                -webkit-transition: -webkit-transform 0.3s;
+                -moz-transition: -moz-transform 0.3s;
+                transition: transform 0.3s;
+            }
+
+            .navbar-custom.is-fixed .navbar-brand {
+                color: #404040;
+            }
+
+            .navbar-custom.is-fixed .navbar-brand:hover,
+            .navbar-custom.is-fixed .navbar-brand:focus {
+                color: rgb(230, 97, 140);
+            }
+
+            .navbar-custom.is-fixed .nav li a {
+                color: #404040;
+            }
+
+            .navbar-custom.is-fixed .nav li a:hover,
+            .navbar-custom.is-fixed .nav li a:focus {
+                color: rgb(230, 97, 140);
+            }
+
+            .navbar-custom.is-visible {
+                /* if the user changes the scrolling direction, we show the header */
+                -webkit-transform: translate3d(0, 100%, 0);
+                -moz-transform: translate3d(0, 100%, 0);
+                -ms-transform: translate3d(0, 100%, 0);
+                -o-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+            }
+        }
+
+        .navbar-default .navbar-toggle:focus,
+        .navbar-default .navbar-toggle:hover {
+            background-color: inherit;
+        }
+
+        .navbar-default .navbar-toggle:active {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            padding: 19px 16px;
+            margin-top: 2px;
+            margin-right: 2px;
+            margin-bottom: 2px;
+            border-radius: 50%;
+        }
+
+        .navbar-default .navbar-toggle .icon-bar {
+            width: 18px;
+            border-radius: 0px;
+            background-color: #fff;
+        }
+
+        .navbar-default .navbar-toggle .icon-bar + .icon-bar {
+            margin-top: 3px;
+        }
+    </style>
+</head>
+<body></body>
+
+
+<body>
+
+
+<!-- Nav -->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">LanMiao</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a href="/">Home</a></li>
+
+                    <li><a href="/portfolio">Portfolio</a></li>
+
+                    <li><a href="/about">About</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- 图片最好960*500 -->
+            <div id="gallery">
+                <img alt="" src="image/1.jpg"
+                     data-image="image/1.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/2.jpg"
+                     data-image="image/2.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/3.jpg"
+                     data-image="image/3.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/4.jpg"
+                     data-image="image/4.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/5.jpg"
+                     data-image="image/5.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/6.jpg"
+                     data-image="image/6.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/7.jpg"
+                     data-image="image/7.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/8.jpg"
+                     data-image="image/8.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/9.jpg"
+                     data-image="image/9.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/10.jpg"
+                     data-image="image/10.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/11.jpg"
+                     data-image="image/11.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/12.jpg"
+                     data-image="image/12.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/13.jpg"
+                     data-image="image/13.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/14.jpg"
+                     data-image="image/14.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/15.jpg"
+                     data-image="image/15.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/16.jpg"
+                     data-image="image/16.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/17.jpg"
+                     data-image="image/17.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/18.jpg"
+                     data-image="image/18.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/19.jpg"
+                     data-image="image/19.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/20.jpg"
+                     data-image="image/20.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/21.jpg"
+                     data-image="image/21.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/22.jpg"
+                     data-image="image/22.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/23.jpg"
+                     data-image="image/23.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/24.jpg"
+                     data-image="image/24.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/25.jpg"
+                     data-image="image/25.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/26.jpg"
+                     data-image="image/26.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+                <img alt="" src="image/27.jpg"
+                     data-image="image/27.jpg"
+                     data-description="生命不止需要长度，更需要宽度。">
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Custom Theme JavaScript -->
+<script>
+    // 向上滚动的时候显示header
+    // Navigation Scripts to Show Header on Scroll-Up
+    jQuery(document).ready(function ($) {
+        var MQL = 1170;
+
+        //primary navigation slide-in effect
+        if ($(window).width() > MQL) {
+            var headerHeight = $('.navbar-custom').height();
+            $(window).on('scroll', {
+                    previousTop: 0
+                },
+                function () {
+                    var currentTop = $(window).scrollTop();
+                    //check if user is scrolling up
+                    if (currentTop < this.previousTop) {
+                        //if scrolling up...
+                        if (currentTop > 0 && $('.navbar-custom').hasClass('is-fixed')) {
+                            $('.navbar-custom').addClass('is-visible');
+                        } else {
+                            $('.navbar-custom').removeClass('is-visible is-fixed');
+                        }
+                    } else {
+                        //if scrolling down...
+                        $('.navbar-custom').removeClass('is-visible');
+                        if (currentTop > headerHeight && !$('.navbar-custom').hasClass('is-fixed')) $('.navbar-custom').addClass('is-fixed');
+                    }
+                    this.previousTop = currentTop;
+                });
+        }
+    });
+
+    // 画廊
+    var api;
+    jQuery(document).ready(function(){
+        api = jQuery("#gallery").unitegallery({
+            gallery_skin:"alexis"
+        });
+        api.play();
+
+
+    });
+</script>
+
+
+</body>
+</html>

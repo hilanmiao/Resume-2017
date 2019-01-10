@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="爱生活的懒喵！">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/image/favicon.jpg">
+
+    
+
+    <title>
+        
+        hexo博客(四)：自定义主题并发布 |
+        
+        LanMiao
+    </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Plugin CSS -->
+
+
+    <!-- Custom CSS -->
+    <!-- ↓这是stylus文件 -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/toc.css">
+
+
+</head>
+<body></body>
+
+
+<body>
+
+<!-- Header -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header {
+     background-image: url('header-img.jpg');
+        /*post*/
+    
+    }
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- 文章 -->
+                
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#hexo"
+                           title="hexo">hexo</a>
+                        
+                        <a class="tag" href="/tags/#git"
+                           title="git">git</a>
+                        
+                        <a class="tag" href="/tags/#博客"
+                           title="博客">博客</a>
+                        
+                    </div>
+                    <h1>hexo博客(四)：自定义主题并发布</h1>
+                    <h2 class="subheading">hexo主题创建及发布</h2>
+                    <span class="meta">
+                            Posted by LanMiao on
+                        2017-02-01
+                        </span>
+                </div>
+                <!-- 非文章 -->
+                
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Nav -->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">LanMiao</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li><a href="/">Home</a></li>
+                    
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    
+                    <li><a href="/about">About</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Content -->
+<!-- Content -->
+<div class="container">
+    <div class="row">
+        <!-- Post container -->
+
+        <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+
+            <p>官方的landscape主题太丑了，用别人的主题不是这里错就是哪里错，基本上别的主题都多少要配置一些东西，像我这种连git都是刚开始用的小白根本搞不动啊。刚开始我的心情是这样的“我就想要个简单的博客，能评论一下就好了啊，你们弄这些没多大卵用的功能搞啥子哦！算了，自己撸一个总行了吧！”。</p>
+<a id="more"></a>
+<p>我的<a href="https://github.com/hilanmiao/hexo-theme-lanmiao" target="_blank" rel="external">懒喵主题</a>是一款粉色系的，参考了<a href="https://github.com/YenYuHsuan/hexo-theme-beantech" target="_blank" rel="external">BeanTech主题</a>。是类似单页的一款主题，使bootstrap构建的简洁主题。就是下面的样子啦！<img src="http://lanmiao.oschina.io/image/lanmiao-desktop.png" alt=""><br>ok，说干就干，期间查了很多资料，看了几个主题的源码，然后就战战兢兢的开始搞了，刚开始根本不知道是啥意思，感觉无从下手啊，根本原因就是没有理解hexo，主题做了几天后才大概明白了这是个什么东西，没关系，这其实就是学习的过程。但是请不要放弃，我也是做了好久才做出来的，到最后你会发现没有那么难，困难需要一点一点的解决！</p>
+<p>咱们就撸一个最简单的博客，为了让你少走弯路，我先把一些概念说一下，这样你做起来会更简单。</p>
+<p>首先务必先看一遍官方文档关于<a href="https://hexo.io/zh-cn/docs/themes.html" target="_blank" rel="external">主题</a>的说明，然后按照官方默认主题landscape搭建一下项目的文件结构。</p>
+<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><p>Hexo 有三种默认布局： post 、 page 和 draft ，它们分别对应不同的路径。<br>post就是指文章详情页，page指的是首页，分类页，标签页，归档页，draft是草稿，这个不用在意，一般用不到，写草稿干啥，我写完就发布了。</p>
+<h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><p>模板文件在layout文件夹下，文件名对应Hexo中的模板名，有index（首页）,post（文章）,page（分页）,archive（归档）,category（分类）,tag（标签）几种，对于普通的header + content + footer的页面结构，header和footer往往是可以复用的，因此我们可以使用layout.ejs进行布局。</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>Hexo提供了很多变量，拿来直接用，页面的内容就是根据这些变量获取的，具体变量介绍看<a href="https://hexo.io/zh-cn/docs/variables.html" target="_blank" rel="external">这里</a></p>
+<h2 id="ejs文件"><a href="#ejs文件" class="headerlink" title="ejs文件"></a>ejs文件</h2><p>你会看到很多文件后缀都是.ejs，ejs是一个JavaScript模板库，用来从JSON数据中生成HTML字符串。其实看一下别的主题的写法就知道大概怎么写了，不会的网上搜一下。出了错控制台都会显示哪一行出的错，很好排错。</p>
+<p>说完上面这些你大概就知道你的博客其实就几个页面而已，首页，文章页，分类页，归档页，标签页，然后就没了，你甚至可以简单到只有首页和文章页。主题中的_config.yml menu对应这几个页面的链接。</p>
+<p>我的主题算是单页，所以更简单，没有多少代码，很好理解。</p>
+<p>首先<code>layout</code>下面的layout.ejs,如果你的网站是普通的header + content + footer的页面结构，header和footer往往是可以复用的，因此我们可以使用layout.ejs进行布局，你所有打开的页面都会是这个样子。</p>
+<p>举例我的layout.ejs<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;!doctype html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line"></div><div class="line">&lt;!-- Head --&gt;</div><div class="line">&lt;%- partial(&apos;_partial/head&apos;) %&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;!-- Header --&gt;</div><div class="line">&lt;%- partial(&apos;_partial/header&apos;,&#123;cache:true&#125;) %&gt;</div><div class="line"></div><div class="line">&lt;!-- Nav --&gt;</div><div class="line">&lt;%- partial(&apos;_partial/nav&apos;,&#123;cache:true&#125;) %&gt;</div><div class="line"></div><div class="line">&lt;!-- Content --&gt;</div><div class="line">&lt;%- body %&gt;</div><div class="line"></div><div class="line">&lt;!-- Footer --&gt;</div><div class="line">&lt;%- partial(&apos;_partial/footer&apos;,&#123;cache:true&#125;) %&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>就是一个普通网站的结构，<code>partial</code>是局部模板让您在不同模板之间共享相同的组件，例如页首（Header）、页脚（Footer）或侧边栏（Sidebar）等，可利用局部模板功能分割为个别文件，让维护更加便利。</p>
+<p>content是内容，其他的去我的主题里看看代码吧，很简单就不讲了。</p>
+<p>然后主要就讲index.ejs，因为我的博客类似于单页，下面是样子<br><img src="http://lanmiao.oschina.io/image/lanmiao-desktop.png" alt="">，从上到下依次是页首+（文章列表，分页，分类，归档，标签）。代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">    &lt;div class=&quot;row&quot;&gt;</div><div class="line">        &lt;!-- Post Container --&gt;</div><div class="line">        &lt;div class=&quot;</div><div class="line">                col-lg-8 col-lg-offset-1</div><div class="line">                col-md-8 col-md-offset-1</div><div class="line">                col-sm-12</div><div class="line">                col-xs-12</div><div class="line">                post-container</div><div class="line">            &quot;&gt;</div><div class="line"></div><div class="line">            &lt;% page.posts.each(function(post)&#123; %&gt;</div><div class="line">                省略</div><div class="line"></div><div class="line">            &lt;% &#125;); %&gt;</div><div class="line"></div><div class="line">            &lt;!-- Pager --&gt;</div><div class="line">            &lt;%- partial(&apos;_partial/pagination&apos;) %&gt;</div><div class="line"></div><div class="line">        &lt;/div&gt;</div><div class="line"></div><div class="line">        &lt;!-- Sidebar --&gt;</div><div class="line">        &lt;%- partial(&apos;_partial/sidebar&apos;) %&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>其中sidebar就是右侧的分类，归档和标签。具体的代码自己去看一下，就不讲了。</p>
+<p>然后就是<code>archive.ejs</code>、<code>category.ejs</code>、<code>tag.ejs</code>基本文件了，但是你会看到里面都只有一句话<code>&lt;%- partial(&#39;_partial/archive&#39;) %&gt;</code>,这代表这三个页面共享局部模板archive.ejs，显示出来的内容是一样的，就只是列了一下检索后的文章列表而已，所以都一样。这里特别说明一下，刚开始的时候很困惑，hexo是怎么根据分类、日期或标签筛选文章的，后来发现hexo根据url自己就筛选出来了。例如你打开了标签了你会发现url变成了<code>xxxx/tags/xxxx/</code>，因为咱们在_partial/archive.ejs生成模板时，代码是page.post……，意思是本页的文章，hexo已经把筛选后的标签放进了变量里了，直接用。</p>
+<p>其实并没有多少东西，对吧。还要注意的是，你应该把你的css，js全放到source文件下。这样一个超简单的博客就完成了，如果你觉得你的博客做的挺好，你可以让官方收录，流程查看<a href="https://hexo.io/zh-cn/docs/variables.html" target="_blank" rel="external">这里</a>，务必要按照要求来，不然会被打回来，我的<a href="https://github.com/hilanmiao/hexo-theme-lanmiao" target="_blank" rel="external">lanmiao(懒喵)</a>主题已经被收录了，有兴趣的可以下载或fork。</p>
+
+
+
+            <!-- Pager -->
+            <ul class="pager">
+                
+                <li class="previous">
+                    <a href="/2017/02/05/hexo5/" >&larr; Previous Post</a>
+                </li>
+                
+                
+                <li class="next">
+                    <a href="/2017/01/15/hexo3/" >Next Post &rarr;</a>
+                </li>
+                
+            </ul>
+
+
+
+        </div>
+        <!-- Sidebar container-->
+        <div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+            <!-- toc -->
+            <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top" role="complementary">
+                <h4><i class="fa fa-bookmark"></i> Catalog</h4>
+                <ul class="nav bs-docs-sidenav">
+
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; LanMiao 2017
+                    <br>
+                    Theme by <a href="http://beantech.org/">Bean Tech</a>
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://lanmiao.oschina.io">LanMiao</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/script.js"></script>
+
+
+
+
+</body>
+</html>
